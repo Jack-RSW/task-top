@@ -9,11 +9,11 @@ public interface StudentMapper {
 
     public Student findById(int id);
 
-    public void addStudent(Student student);
+    public int addStudent(Student student);
 
-    public void updateStudent(Student student);
+    public boolean updateStudent(Student student);
 
-    public void deleteById(int id);
+    public boolean deleteById(int id);
 
     public List<Student> findAll();
 

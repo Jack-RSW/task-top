@@ -70,4 +70,6 @@
     <!--9. aspectj支持自动代理实现AOP功能 -->
     <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
 
+    <bean id="baseHolderUtil" class="com.jnshu.utils.BaseHolderUtil" lazy-init="false" />
+
 </beans>
