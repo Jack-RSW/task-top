@@ -21,8 +21,9 @@ import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
 
+    //若未继承类则声明一个JdbcTemplate变量jdbcTemplate来注入
+    private JdbcTemplate jdbcTemplate;
     //add 方法未使用JdbcTemplate模板来加载数据源datasource，未有连接池，使用原始的连接来连接数据库和增加数据
-
     @Override
     public void add(Student student) throws SQLException {
         //编写sql语句
@@ -132,4 +133,7 @@ public class StudentDAOImpl implements StudentDAO {
             return list;
         }
 
-}
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+        }//若未继承JdbcDaoSupport则声明一个JdbcTemplate变量jt来注入
+    }

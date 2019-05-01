@@ -41,7 +41,6 @@ public class TMain {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(url,name,password);
             conn.setAutoCommit(false);//这里将系统默认的自动事务提交关闭了，所以程序执行的时候，插入数据不会实时动态提交到mysql
-            int count =0;//计数变量
             PreparedStatement ps = conn.prepareStatement(sql);//预编译SQL语句
             long startTime=System.currentTimeMillis();
             for (int i = 1; i <= total; i++) {
@@ -107,3 +106,4 @@ public class TMain {
     }
 
 }
+
