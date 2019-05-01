@@ -132,8 +132,8 @@ public class StudentDAOImpl implements StudentDAO {
             });
             return list;
         }
-
+    //若未继承JdbcDaoSupport则声明一个JdbcTemplate变量jdbcTemplate来注入,也可以不需要，直接在spirng配置文件中不加property
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
-        }//若未继承JdbcDaoSupport则声明一个JdbcTemplate变量jt来注入
+        }
     }
